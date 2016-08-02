@@ -953,7 +953,7 @@ app.service('UserService', function() {
         $.ajax({
             type: 'GET',
             contentType: 'application/json',
-            url: 'http://pokemon.rhocode.com:81/api/getPokemon/' + id,
+            url: 'https://pokemon.rhocode.com:81/api/getPokemon/' + id,
             success: function(data) {
 
                 var dat = JSON.parse(JSON.stringify(data));
