@@ -312,7 +312,7 @@
 
         
 
-             console.log(data)
+             
 
              $.ajax({
                  type: 'POST',
@@ -323,7 +323,7 @@
 
                      var dat = JSON.parse(JSON.stringify(data));
 
-                     console.log(dat.status)
+                     
 
                      if (dat.status == "success") {
 
@@ -339,8 +339,7 @@
                              }, 2000);
 
                      } else {
-                         console.log("DEBUGGY")
-                         console.log(dat.reason)
+                       
 
                          if (dat.reason && dat.reason == "invalidLogin") {
                              $("#errordet").html("Please check your username and password.");
@@ -395,7 +394,7 @@
 
                  },
                  error: function(textStatus, errorThrown) {
-                     console.log("ERROR!")
+                     
                      $("#submit").removeClass("loading");
                  }
 
