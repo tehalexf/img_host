@@ -988,7 +988,7 @@ app.controller("userController", function($scope, $location, UserService) {
     $.ajax({
         type: 'GET',
         contentType: 'application/json',
-        url: 'http://pokemon.rhocode.com:81/api/getPokemon/' + $location.search().id,
+        url: 'https://pokemon.rhocode.com/api/getPokemon/' + $location.search().id,
         success: function(data) {
 
             var dat = JSON.parse(JSON.stringify(data));
