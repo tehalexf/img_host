@@ -1,0 +1,55 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
+
+<h3 class="header text-info">Display JSON data in a view template</h3>
+<div ng-app="myApp" ng-controller="AppCtrl">
+    <h2>Meta info</h2>
+    <div class="row-fluid">
+        Limit# {{data.meta.limit}}<br />
+        Offset# {{data.meta.offset}}<br />
+        Limit# {{data.meta.next}}<br />
+        Previoust# {{data.meta.previous}}<br />
+        Total count# {{data.meta.total_count}}
+    </div>
+    <h2>Data Objects</h2>
+    <div class="row-fluid">
+        <table class="table table-hover table-striped table-condensed">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>GenreType</th>
+                    <th>URI</th>                
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="object in data.objects">
+                    <td>{{object.id}}</td>
+                    <td>{{object.GenreType}}</td>
+                    <td>{{object.resource_uri}}</td>                
+                </tr>            
+            </tbody>
+        </table>
+    </div>
+    <pre>Data = {{data | json}}</pre>
+</div>    
+
+
+
+<script>
+
+'use strict';
+
+var app = angular.module('myApp', []);
+
+app.controller('AppCtrl', function($scope){
+    $scope.data = {
+	"meta": {"limit": 20, "next": null, "offset": 0, "previous": null, "total_count": 3}, 
+	"objects": [
+			{"GenreType": "Terror", "id": "515d63a88774a7191cc58276", "resource_uri": "/test/api/v1/Genre/515d63a88774a7191cc58276"}, 
+			{"GenreType": "Drama", "id": "515d63ab8774a7191cc58277", "resource_uri": "/test/api/v1/Genre/515d63ab8774a7191cc58277"}, 
+			{"GenreType": "Acc\u00e3o", "id": "515d63cb8774a7191cc58278", "resource_uri": "/test/api/v1/Genre/515d63cb8774a7191cc58278"}
+		]
+};
+
+});
+
+</script>

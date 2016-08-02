@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   <script type="text/javascript">
+    var host = "yoursite.com";
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+        window.location.protocol = "https";
+</script>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="http://cdn.materialdesignicons.com/1.6.50/css/materialdesignicons.min.css">
+      <script src="dist/semantic.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
+      <link rel="stylesheet" type="text/css" href="css/profile.css">
+      <script src="dist/semantic.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+      <script src="js/profile.js"></script>
+      <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+   </head>
+   <body style="background: #D1F1FC; ">
+      <div ng-app="app">
+         <div ng-view></div>
+         <div class="main"  ng-controller="userController">
+            <div class="ui bottom attached">
+               <div class="ui visible inverted left vertical sidebar menu" style="padding-top:10px">
+                  <div class="cen_text">
+					<img style="height: auto; width: 220px;margin-top: 5px;" src="images/trainerrank.png">
+				  <div class="profile_cardz">
+                     <img ng-src="images/{{profile}}" width="180px" height="180px" class="rounded-profile">
+					 
+				   <div class="profile_card_statsz">
+                     <div class="profile-name">{{username}}</div>
+                     <br/>
+                     <div class="profile-text row">
+                        <span style="font-size:18px">Lv. </span><span style="font-size:24px">{{level}} </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup style="font-size:16px">{{caught}}</sup><span style="font-size:25px">/</span><sub style="font-size:16px">151</sub> &nbsp; <span style="font-size:18px">Caught</span>
+                     </div>  
+				   </div>
+				 </div>				  
+                        
+                        <br/>
+                        <div class="profile-text">
+                           More Icon choices and stats <br/> coming soon...
+                        </div>
+                     
+					 
+					 <button style="margin-top: 30px; width: 200px"class="white ui button disabled">Profile</button> <br><br>
+					 <button style="width: 200px" class="orange ui button disabled">Leaderboard</button> <br><br>
+					 <div style="width: 100px; margin-left: 25px;">
+						<div style="width: 120px" class="ui action left icon input">
+								<i class="search icon"></i>
+								<input type="text" class="disabled" placeholder="Search">
+								<button style="width: 70%" class="ui button disabled">Search</button>
+							  </div>
+					</div>
+
+                  </div>
+               </div>
+ <!--               <div class="ui fixed inverted menu">
+                  <div class="ui container" style="border-bottom: 10px solid #1B1C1D">
+                     <a href="#" class="header item">
+                     <img class="logo" src="http://semantic-ui.com/examples/assets/images/logo.png" style="margin-right: 10px;">
+                     Pokemon Go
+                     </a>
+                     <a href="#" class="item">Home</a>
+                     <div class="ui simple dropdown item">
+                        Dropdown <i class="dropdown icon"></i>
+                        <div class="menu">
+                           <a class="item" href="#">Link Item</a>
+                           <a class="item" href="#">Link Item</a>
+                           <div class="divider"></div>
+                           <div class="header">Header Item</div>
+                           <div class="item">
+                              <i class="dropdown icon"></i>
+                              Sub Menu
+                              <div class="menu">
+                                 <a class="item" href="#">Link Item</a>
+                                 <a class="item" href="#">Link Item</a>
+                              </div>
+                           </div>
+                           <a class="item" href="#">Link Item</a>
+                        </div>
+                     </div>
+                  </div>
+               </div> 
+			   
+<div class="ui segment">
+  <h3 class="ui header">
+    Overlayable Section
+  </h3>
+  <div class="ui small images">
+    <img>
+    <img>
+    <img>
+  </div>
+  <p></p>
+  <div class="ui dimmer">
+    <div class="content">
+      <div class="center">
+        <h2 class="ui inverted icon header">
+          <i class="heart icon"></i>
+          Dimmed Message!
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+			   
+			   
+			   -->
+               <div style="margin-left:260px">
+                  <div class="ui basic segment" >
+                     <!--       <h3 class="ui header">Application Content</h3>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p> -->
+                     <div style="width: 100%" class="profile_content ui">
+                        <h1 >POKEMON INVENTORY</h1>
+                        <div ng-controller="pokemonController" class="ui fluid container link cards pokemon_cards">
+                           
+                              <div ng-repeat="pokemon in pokemons" style="margin-right: 17px;border: 5px solid transparent;border-image: url(images/foil.jpg) 20 round; background-image: url('images/white.png');width: 220px; min-width:190px {{pokemon.foil}}" class="ui raised card poke_card_block card_style">
+                                 <div style="margin-bottom: -20px" class="content">
+                                    <p style="float: left" class="poke_card_name"> {{pokemon.name}} <i class="{{pokemon.favorite}} star icon"></i></p>
+                                    <div style="float: right; margin-top: 3px;" class="poke_card_cp">CP<span>{{pokemon.cp}}</span></div>
+                                 </div>
+                                 <div class="im">
+                                    <img class="poke_card_img" ng-src="{{pokemon.id}}">
+                                 </div>
+                                 <div style="height: 53px" class="content">
+                                    <div style="margin: 0 auto" class="ui small indicating progress  poke_card_bar" data-percent="70">
+                                       <div class="bar" style="transition-duration: 300ms; width: {{pokemon.percentage}}%;">
+                                          <div class="progress">{{pokemon.percentage}}%</div>
+                                       </div>
+                                       <div class="label">{{pokemon.type}}</div>
+                                    </div>
+                                 </div>
+                                 <div style="height: 20px" class="content">
+                                    <div style="margin-top: -10px">
+                                       <div style="float: left; width: 50%;">
+                                          <p class="move_text" style="text-align: center">{{pokemon.move_1}}</p>
+                                       </div>
+                                       <div style="float: left; width: 50%;" >
+                                          <p class="move_text" style="text-align: center">{{pokemon.move_2}}</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div style="height: 20px" class="content">
+                                    <div style="width: 70%; margin: auto; margin-top: -7px" >
+                                       <div data-inverted="" data-tooltip="IV: Attack" data-position="bottom left" style="float: left; width: 33%">
+                                          <i style="font-size: 14px;" class="mdi mdi-sword"></i> {{pokemon.iv_atk}}
+                                       </div>
+                                       <div style="float: left; width: 33%" data-inverted="" data-tooltip="IV: Defense" data-position="bottom center">
+                                          <i style="font-size: 14px;" class="mdi mdi-shield-outline"></i> {{pokemon.iv_def}}
+                                       </div>
+                                       <div data-inverted="" data-tooltip="IV: Stamina" data-position="bottom right" style="float: left; width: 33%">
+                                          <i style="font-size: 14px;" class="mdi mdi-flash"></i> {{pokemon.iv_sta}}
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           
+                        </div>
+                     </div>
+						<div class="ui dimmer transition hidden">
+						  <div class="content">
+							<div class="center">
+							<div style="margin-left: -20%;margin-top: -2%; position: fixed">
+								  <h2 class="ui inverted icon header">
+									<i class="heart icon"></i>
+									Dimmed Message!
+								  </h2>
+							  </div>
+							</div>
+						  </div>
+						</div>
+                  </div>
+               </div>
+            </div>
+            <!-- 
+               <div class="profile_stats">
+               
+               	<div class="ui card">
+               	  <a class="image" href="#link">
+               		<img src="http://masterball.online/uploads/monthly_2016_05/maxresdefault.jpg.62c62e8aa98e320d16dc27be3670fffc.thumb.jpg.208d0eb157dc7e6df6ff2ccdbffa003d.jpg">
+               	  </a>
+               	  <div class="content">
+               		<a class="header" href="#link">Dylan Smith</a>
+               		<div class="meta">
+               		  <a class="time">Level 4</a>
+               		</div>
+               	  </div>
+               	</div>
+               
+               </div>
+                -->
+            <!-- 		<div class="profile_cards">
+               </div>
+			                                 <div ng-repeat="pokemon in pokemons" style="margin-right: 17px;border: 5px solid transparent;border-image: url(images/foil.jpg) 20 round; background-image: url('images/gold.png'),url('images/white.png');background-position:center;background-size: 80% 70%, 100% 100%;background-repeat:no-repeat,repeat;width: 210px; min-width:190px {{pokemon.foil}}" class="ui raised card poke_card_block card_style">
+
+                -->
+         </div>
+      </div>
+	  
+		
+   </body>
+</html>
+
+<script>
+/*
+$(".basic").click(function(){
+	$('.basic').dimmer('show');
+	$(".center").center();
+});
+
+
+
+jQuery.fn.center = function () {
+    this.css("position","absolute");
+    this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + 
+                                                $(window).scrollTop()) + "px");
+    this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + 
+                                                $(window).scrollLeft()) + "px");
+    return this;
+}
+*/
+</script>

@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="http:/cdn.materialdesignicons.com/1.6.50/css/materialdesignicons.min.css">
+      <script src="dist/semantic.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
+      <link rel="stylesheet" type="text/css" href="css/profile.css">
+      <link rel="stylesheet" href="http:/cdn.materialdesignicons.com/1.6.50/css/materialdesignicons.min.css">
+      <script src="dist/semantic.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="me.js"></script>
+</head>
+   <body >
+
+<div ng-app="app">
+    <p>Try to change the names.</p>
+    <div ng-controller="personController">
+        <p>
+            First Name:
+            <input type="text" ng-model="firstName" />
+        </p>
+        <p>
+            Last Name:
+            <input type="text" ng-model="lastName" />
+        </p>
+        <p>
+            Full Name: 
+            {{firstName}} {{lastName}}
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
+

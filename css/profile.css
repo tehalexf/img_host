@@ -1,0 +1,223 @@
+
+ @font-face { font-family: PressStart2P; src: url('PressStart2P.ttf'); } 
+
+body {
+height: 90%;
+}
+
+/*.main{
+
+width: 100%;
+height: 105%;
+
+
+}*/
+/*	#ccece7 			#eef9e9		*/
+.profile_stats{
+
+width: 200px;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 20px;
+float: left;
+height: 100%;
+background-color: #4A96AD;
+
+}
+
+.profile_card{
+background-color: #50545a;
+margin-left: 10px;
+margin-right: 10px;
+margin-top: 10px;
+padding-bottom: 10px;
+border-radius: 15px;
+border: 1px solid #9c9c9c;
+
+}
+
+.profile_card_stats{
+margin-top: 10px;
+background-color: grey;
+padding-bottom: 10px;
+}
+
+.profile_cards{
+
+width: auto;
+height: 100%;
+float: right;
+
+    background: #ccece7; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#ccece7, yellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ccece7, yellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ccece7, yellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ccece7, #F2FBEE); /* Standard syntax */
+
+}
+
+.profile_content{
+/*padding-left: 10px;*/
+/*padding-top: 10px;*/
+
+}
+
+.poke_row{
+height: 250px;
+padding-top: 20px;
+padding-left: 0px;
+padding-right: 20px;
+width: 100%;
+}
+
+
+.poke_character{
+  max-width:100px;
+  height:auto;
+  margin: auto;
+  display: block;
+  width: 45%;
+}
+
+.cen_text{
+text-align: center;
+}
+
+.cen_text span{
+font-size: 20px;
+}
+
+.prog_bar{
+width: 60%; 
+margin: 0 auto
+}
+
+.poke_card{
+height: 250px;
+padding-top: 20px;
+padding-left: 10px;
+padding-right: 20px;
+/*width: 100%;*/
+width:100px;
+min-width: 100px !important;
+}
+
+.poke_card_width{
+width: 190px;
+min-width: 100px !important;
+}
+
+.poke_card_character{
+  max-width:100px;
+  height:auto;
+  margin: auto;
+  display: block;
+  width: 45%;
+  min-width: 100px !important;
+}
+
+.poke_card_img{
+  height:auto;
+  margin: auto;
+  display: block;
+  /* width: 55%; */
+  border-radius: inherit;
+  min-width: 100px !important;
+}
+
+.poke_card_block{
+width: 150px;
+min-width: 100px !important;
+}
+
+.poke_card_cp{
+float: right;
+}
+
+.poke_card_cp span{
+font-size: 20px;
+}
+
+.poke_card_name{
+font-size: 18px;
+}
+
+.poke_card_bar{
+width: 90%; 
+margin: 0 auto
+}
+
+.move_text{
+font-size: 12px;
+}
+
+.poke_iv_level{
+font-size: 14px;
+}
+
+.poke_card_top{
+margin-bottom: -20px;
+}
+
+.rounded-profile {
+    border-radius: 50%;
+    border: 10px solid white;
+    /*padding: 20px; */
+    width: 180px;
+    height: 180px; 
+    margin-top:20px;
+}
+
+.sidebar {
+  background-color: #292929  !important; 
+}
+.profile-name {
+  color:white;
+  font-size:15px;
+  padding-top:10px;
+}
+.profile-text {
+  color:white;
+  
+}
+
+.card_style{
+background-image: url("images/white.png");
+}
+
+.new_card{
+ background-image: url('images/glow.png');
+}
+
+.logo{
+font-family: "PressStart2P";
+font-weight: 1700;
+font-size: 35px;
+color: yellow;
+  -webkit-text-stroke: 1.5px #466CC7;
+    text-shadow:
+    3px 3px 0 #000,
+    /* Simulated effect for Firefox and Opera
+       and nice enhancement for WebKit */
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000;
+	
+}
+
+/*
+.card {
+  width: 60px 
+}*/
+
+.pokemon_cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+}
+

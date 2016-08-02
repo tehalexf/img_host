@@ -1,0 +1,65 @@
+body {
+width: 100%;
+height: 100%;
+background-image: url("https://static.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg");
+background-size: 100% 100%;
+}
+
+.main {
+padding-top: 100px;
+margin: auto;
+width: 90%;
+height: 100%;
+
+}
+
+.lead{
+float: left;
+width: 30%;
+
+max-height: 100vh;
+border-radius: 15px;
+border: 2px solid #fff;
+margin-right: 40px;
+
+}
+
+
+
+
+
+
+.flexcroll{ 
+height:400px;
+overflow-y:auto;
+}
+
+.flexcroll{
+    scrollbar-face-color: #bbc4ef;
+    scrollbar-shadow-color: #FFFFFF;
+    scrollbar-highlight-color: #FFFFFF;
+    scrollbar-3dlight-color: #FFFFFF;
+    scrollbar-darkshadow-color: #FFFFFF;
+    scrollbar-track-color: #FFFFFF;
+    scrollbar-arrow-color: #FFFFFF;
+}
+
+/* Let's get this party started */
+.flexcroll::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+.flexcroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: #bbc4ef;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+.flexcroll::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #bbc4ef; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
