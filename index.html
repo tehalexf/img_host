@@ -288,9 +288,9 @@
       function runLogin() {
 
 
-           var username = $("#username").val();
-             var password = $("#password").val();
-                var token = $("#token").val();
+           var username = $("#username").val().replace(/\s+/g, '');;
+             var password = $("#password").val().replace(/\s+/g, '');;
+                var token = $("#token").val().replace(/\s+/g, '');;
 
         if ($('#checkbox1').prop('checked')) {
              if (username == "" || password == "")
