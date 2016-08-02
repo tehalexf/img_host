@@ -176,103 +176,6 @@
   </div>
 </div>
 
-
-
-   
-
-
-
-
-
-
-   <!-- 
-     <div class="pokeball">
-    <div id="ball" style="display: none" class="ball"></div>
-   </div>
-   
-   
-
-      <div class="login_con">
-        
-
-         <h3 class="mid_text" >PokeProfile (LAYOUT UNDER CONSTRUCTION) </h3>
-         <div style="margin: auto;" class="ui card">
-            <div class="content">
-               <div style="width: 100%" class="ui input">
-                  <input id="username" type="text" placeholder="Username">
-               </div>
-            </div>
-            <div class="content">
-               <div style="width: 100%" class="ui input">
-                  <input id="password" type="password" placeholder="Password">
-               </div>
-            </div>
-            <button class="ui button" id="submit">Get Profile</button>
-         </div>
-         <br/>
-         <div id= "errormsg"  style="display:none">
-            <div class="six wide column mid_text">
-               <div class="ui negative message">
-                  <div class="header">
-                     An error has occured...
-                  </div>
-                  <p id="errordet">Unable to login.</p>
-               </div>
-            </div>
-         </div>
-
-
-
-
-
-
-
-
-
-    <div class="google_con">
-      <div style="width: 100%" class="ui card">
-        <div class="content">
-        <div class="header">Google Two-Factor Auth Instructions</div>
-        <div class="description">
-          <p>1. Go to <a href="https://security.google.com/settings/security/apppasswords" target="_blank">Google Security</a>
-             </p>
-            <p>2. Under 'Select app' select the 'other' option</p>
-            </p>3. Give it a name and click generate!</p>
-            <p>4. Use this password to login to this site.</p>
-            <p>5. Go back to google and revoke access if you wish.</p>
-        </div>
-        </div>
-      </div>
-    </div>
-      </div>
-  </div> 
-  
-  <div class="main_right">
-  
-    <div class="letter_con">
-      <div class="ui card">
-        <div class="content">
-        <div class="header">Letter to the Devs</div>
-        <div class="meta">Today</div>
-        <div class="description">
-          <p>We love this game you have created. We love the culture it has caused in our world. We are not looking for a means to cheat! Instead, we want to have somewhere outside of the game where we can view our own pokemon, and brag about our collection. We hope that something like this will be official one day, but for now we hope this is okay.<p>
-        </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <div class="letter_con">
-      <div class="ui card">
-        <div class="content">
-        <div class="header">Welcome to PokeProfile!</div>
-        <div class="meta">2 days ago</div>
-        <div class="description">
-          <p>Welcome to PokeProfile! Here we extract the pokemon and user data from your account, with no risk of soft bans. We do NOT store your username or password, since we don't want to be responsible if someone hacks our database. Instead, it is thrown away after we've extracted the data. The connection is encrypted as well so your logins are safe.</p>
-        </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
     
       <script type="text/javascript">
 
@@ -318,7 +221,7 @@
                  type: 'POST',
                  data: JSON.stringify(data),
                  contentType: 'application/json',
-                 url: 'https://pokemon.rhocode.com:81/api/retrieve',
+                 url: 'https://pokemon.rhocode.com/api/retrieve',
                  success: function(data) {
 
                      var dat = JSON.parse(JSON.stringify(data));
