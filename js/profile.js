@@ -995,8 +995,10 @@ app.controller("userController", function($scope, $location, UserService) {
 
             $scope.username = dat.username;
 
-            if(!(dat.username))
+            if(!(dat.username)) {
                 alert("Invalid Profile!")
+                return
+            }
 
             $scope.level = dat.level;
 
