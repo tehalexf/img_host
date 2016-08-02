@@ -954,6 +954,7 @@ app.service('UserService', function() {
             type: 'GET',
             contentType: 'application/json',
             url: 'https://pokemon.rhocode.com/api/getPokemon/' + id,
+            
             success: function(data) {
 
                 var dat = JSON.parse(JSON.stringify(data));
