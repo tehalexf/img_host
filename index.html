@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+
       <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-81820417-1', 'auto');
   ga('send', 'pageview');
-
 </script>
    <script type="text/javascript">
     var host = "yoursite.com";
     if ((host == window.location.host) && (window.location.protocol != "https:"))
         window.location.protocol = "https";
 </script>
+
    <meta name="viewport" content="width=device-width, initial-scale=1">
       <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
       <link rel="stylesheet" href="https://cdn.materialdesignicons.com/1.6.50/css/materialdesignicons.min.css">
@@ -24,7 +24,6 @@
       <link rel="stylesheet" type="text/css" href="css/login.css">
       <link rel="stylesheet" href="dist/animationpoki/css/reset.css">
       <link rel="stylesheet" href="dist/animationpoki/css/style.css">
-      <title>TrainerRank | Home</title>
    </head>
    <body>
 
@@ -146,7 +145,7 @@
 
           </div>
           
-          <div class="five wide column">
+          <div id="mob_remove" class="five wide">
                   <div class="ui centered card">
         <div class="content left aligned ">
         <div class="header">Welcome to PokeProfile</div>
@@ -186,6 +185,103 @@
   </div>
 </div>
 
+
+
+   
+
+
+
+
+
+
+   <!-- 
+     <div class="pokeball">
+    <div id="ball" style="display: none" class="ball"></div>
+   </div>
+   
+   
+
+      <div class="login_con">
+        
+
+         <h3 class="mid_text" >PokeProfile (LAYOUT UNDER CONSTRUCTION) </h3>
+         <div style="margin: auto;" class="ui card">
+            <div class="content">
+               <div style="width: 100%" class="ui input">
+                  <input id="username" type="text" placeholder="Username">
+               </div>
+            </div>
+            <div class="content">
+               <div style="width: 100%" class="ui input">
+                  <input id="password" type="password" placeholder="Password">
+               </div>
+            </div>
+            <button class="ui button" id="submit">Get Profile</button>
+         </div>
+         <br/>
+         <div id= "errormsg"  style="display:none">
+            <div class="six wide column mid_text">
+               <div class="ui negative message">
+                  <div class="header">
+                     An error has occured...
+                  </div>
+                  <p id="errordet">Unable to login.</p>
+               </div>
+            </div>
+         </div>
+
+
+
+
+
+
+
+
+
+    <div class="google_con">
+      <div style="width: 100%" class="ui card">
+        <div class="content">
+        <div class="header">Google Two-Factor Auth Instructions</div>
+        <div class="description">
+          <p>1. Go to <a href="https://security.google.com/settings/security/apppasswords" target="_blank">Google Security</a>
+             </p>
+            <p>2. Under 'Select app' select the 'other' option</p>
+            </p>3. Give it a name and click generate!</p>
+            <p>4. Use this password to login to this site.</p>
+            <p>5. Go back to google and revoke access if you wish.</p>
+        </div>
+        </div>
+      </div>
+    </div>
+      </div>
+  </div> 
+  
+  <div class="main_right">
+  
+    <div class="letter_con">
+      <div class="ui card">
+        <div class="content">
+        <div class="header">Letter to the Devs</div>
+        <div class="meta">Today</div>
+        <div class="description">
+          <p>We love this game you have created. We love the culture it has caused in our world. We are not looking for a means to cheat! Instead, we want to have somewhere outside of the game where we can view our own pokemon, and brag about our collection. We hope that something like this will be official one day, but for now we hope this is okay.<p>
+        </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="letter_con">
+      <div class="ui card">
+        <div class="content">
+        <div class="header">Welcome to PokeProfile!</div>
+        <div class="meta">2 days ago</div>
+        <div class="description">
+          <p>Welcome to PokeProfile! Here we extract the pokemon and user data from your account, with no risk of soft bans. We do NOT store your username or password, since we don't want to be responsible if someone hacks our database. Instead, it is thrown away after we've extracted the data. The connection is encrypted as well so your logins are safe.</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
     
       <script type="text/javascript">
 
@@ -225,7 +321,7 @@
 
         
 
-             
+             console.log(data)
 
              $.ajax({
                  type: 'POST',
@@ -236,7 +332,7 @@
 
                      var dat = JSON.parse(JSON.stringify(data));
 
-                     
+                     console.log(dat.status)
 
                      if (dat.status == "success") {
 
@@ -252,7 +348,8 @@
                              }, 2000);
 
                      } else {
-                       
+                         console.log("DEBUGGY")
+                         console.log(dat.reason)
 
                          if (dat.reason && dat.reason == "invalidLogin") {
                              $("#errordet").html("Please check your username and password.");
@@ -279,7 +376,7 @@
                              }, 4000);
                          }  else if (dat.reason && dat.reason == "noavatar") {
                              
-                             $("#errordet").html("Please name your account and create a character first. If you have already done so, your character may have been reset by the last dumb patch! Contact Niantic Support!");
+                             $("#errordet").html("Please name your account and create a character first. If you have already done so, your character may have been reset by the last dumb patch! Log in and check that you haven't been reset! Then contact Niantic Support!");
                              $("#errormsg").fadeIn();
                              $("#submit").removeClass("loading");
                              setTimeout(function() {
@@ -307,8 +404,13 @@
 
                  },
                  error: function(textStatus, errorThrown) {
+                        $("#errordet").html("Your request timed out. Niantic's server is probably down.");
+                             $("#errormsg").fadeIn();
+                             $("#submit").removeClass("loading");
+                             setTimeout(function() {
+                                 $("#errormsg").fadeOut();
+                             }, 4000);
                      
-                     $("#submit").removeClass("loading");
                  }
 
              });
@@ -323,15 +425,16 @@
                 //  validate(); doesn't need to be called from here
               }
           });
+         window.location.href-"https://accounts.google.com/o/oauth2/auth?client_id=848232511240-73ri3t7plvk96pj4f85uj8otdat2alem.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&scope=openid%20email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email"
       </script>
   
   <script src="https://apis.google.com/js/api.js"></script>
 <script>
 </script>
 
-  <div style="position: absolute;bottom: 0; width: 100%; height: 67px">
-    <div id="pikachu"></div>
-  <div id="ash"></div>
+  <div class="mob_dis" style="position: absolute;bottom: 0; width: 100%; height: 67px">
+    <div  id="pikachu"></div>
+  <div  id="ash"></div>
   </div>
   
   
@@ -359,6 +462,10 @@ style="position: absolute;bottom: 0;"
     //    document.getElementById("ball").style.display = "none";
     //  }, 4000);
     // }
+
+
+
+
    </script>
    
    <!--

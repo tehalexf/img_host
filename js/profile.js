@@ -954,7 +954,6 @@ app.service('UserService', function() {
             type: 'GET',
             contentType: 'application/json',
             url: 'https://pokemon.rhocode.com/api/getPokemon/' + id,
-            
             success: function(data) {
 
                 var dat = JSON.parse(JSON.stringify(data));
@@ -995,10 +994,11 @@ app.controller("userController", function($scope, $location, UserService) {
 
             $scope.username = dat.username;
 
-            if(!(dat.username)) {
-                alert("Invalid Profile!")
-                return
-            }
+      
+              if(!(dat.username)) {
+                  alert("Invalid Profile!")                 
+               return
+             }
 
             $scope.level = dat.level;
 
@@ -1074,7 +1074,7 @@ app.controller("pokemonController", function($scope, UserService) {
     } else if (team == 2) {
         $scope.profile = "instinct.png";
     } else if (team == 3) {
-        $scope.profile = "valor.pnh";
+        $scope.profile = "valor.png";
     }
 
     $scope.caught = "30";

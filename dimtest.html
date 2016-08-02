@@ -1,0 +1,49 @@
+   <head>
+      <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="http://cdn.materialdesignicons.com/1.6.50/css/materialdesignicons.min.css">
+      <script src="dist/semantic.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
+      <link rel="stylesheet" type="text/css" href="css/profile.css">
+      <script src="dist/semantic.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+      <script src="js/profile.js"></script>
+      <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+   </head>
+   
+   
+  <body>
+  
+<div style="height: 500px;" class="ui segment dimmable">
+        <h3 class="ui header">
+          Overlayable Section
+        </h3>
+        <div class="ui dimmer transition hidden">
+          <div class="content">
+            <div class="center">
+			<p>Hello</p>
+              <h2 class="ui inverted icon header">
+                <i class="heart icon"></i>
+                Dimmed Message!
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+	  
+	  
+	  
+	  <script>
+	  
+	  
+
+$(".segment").click(function(){
+	$('.segment').dimmer('show');
+});
+	  
+	  </script>
+
+	
+	
+  
+  </body>
