@@ -1037,7 +1037,8 @@ app.controller("userController", function($scope, $location, UserService) {
                 entry.move_1 = moveList[entry.move_1]
                 entry.move_2 = moveList[entry.move_2]
                 var leftSide = ((entry.cpMultiplier + entry.additionalCPMultiplier) / 0.095)
-                entry.percentage = Math.round(Math.min((leftSide * leftSide), dat.level) / dat.level * 100)
+                entry.percentage = Math.round(entry.stamina / entry.stamina_max)
+                entry.percentageText = entry.stamina.toString() + "/" + entry.stamina_max.toString() + "HP"
 
 
             });
