@@ -31,7 +31,6 @@
          <div ng-view></div>
          <div class="main"  ng-controller="userController">
             <div class="ui bottom attached">
-			 <div class="mobile_chk" >
                <div class="ui visible inverted left vertical sidebar menu" style="padding-top:10px">
                   <div class="cen_text">
 					<img style="height: auto; width: 220px;margin-top: 5px;" src="images/trainerrank.png">
@@ -68,7 +67,6 @@
 
                   </div>
                </div>
-			  </div>
  <!--               <div class="ui fixed inverted menu">
                   <div class="ui container" style="border-bottom: 10px solid #1B1C1D">
                      <a href="#" class="header item">
@@ -121,34 +119,18 @@
 			   
 			   
 			   -->
-               <div class="cards_width">
-                  <div id="mob_mar" class="ui basic segment" >
-				  <div class="mobile_resize">
+               <div style="margin-left:260px">
+                  <div class="ui basic segment" >
                      <!--       <h3 class="ui header">Application Content</h3>
                         <p></p>
                         <p></p>
                         <p></p>
                         <p></p> -->
                      <div style="width: 100%" class="profile_content ui">
-						
-						<div class="profile_header">
-							<br>
-							<div class="profile_inside">
-								<div style="float: left; width: 30%">
-									<img ng-src="images/{{profile}}" width="45px" height="45px" >
-								</div>
-								
-								<div style="float: left; width: 70%;" >
-									<p style="margin-bottom: 10px;" >{{username}}</p>
-								   <span style="font-size:14px">Lv. </span><span style="font-size:14px">{{level}} </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup style="font-size:14px">{{caught}}</sup><span style="font-size:14px">/</span><sub style="font-size:14px">151</sub> &nbsp; <span style="font-size:14px">Caught</span>
-								</div>
-							</div>
-						</div>
-					 
-                        <h1 class="mobile_title">POKEMON INVENTORY</h1>
+                        <h1 >POKEMON INVENTORY</h1>
                         <div ng-controller="pokemonController" class="ui fluid container link cards pokemon_cards">
                            
-                              <div ng-repeat="pokemon in pokemons" style="margin-right: 0px;border: 5px solid transparent;border-image: url(images/foil.jpg) 20 round; background-image: url('images/white.png');width: 220px; min-width:190px {{pokemon.foil}}" class="ui raised card poke_card_block card_style">
+                              <div ng-repeat="pokemon in pokemons" style="margin-right: 17px;border: 5px solid transparent;border-image: url(images/foil.jpg) 20 round; background-image: url('images/white.png');width: 220px; min-width:190px {{pokemon.foil}}" class="ui raised card poke_card_block card_style">
                                  <div style="margin-bottom: -20px" class="content">
                                     <p style="float: left" class="poke_card_name"> {{pokemon.name}} <i class="{{pokemon.favorite}} star icon"></i></p>
                                     <div style="float: right; margin-top: 3px;" class="poke_card_cp">CP<span>{{pokemon.cp}}</span></div>
@@ -204,7 +186,6 @@
 						  </div>
 						</div>
                   </div>
-				  </div>
                </div>
             </div>
             <!-- 
@@ -254,21 +235,4 @@ jQuery.fn.center = function () {
     return this;
 }
 */
-
-
-</script>
-
-
-<script type="text/javascript">
-
-if (screen.width <= 699) {
-document.getElementById("mob_mar").style.left = "-3%";
-}else{
-document.getElementById("mob_mar").style.left = "";
-}
-
-if (screen.width > 700) {
-document.getElementById("mob_mar").style.left = "";
-}
-
 </script>
